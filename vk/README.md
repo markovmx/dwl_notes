@@ -43,7 +43,7 @@ Download all videos from community:
 Sometimes yt-dlp save vk.com video with extension .unknown_video, for fix run next command in folder with videos:
 ```
 for file in *.unknown_video; do
-    ffmpeg -i "$file" -c:v copy -c:a copy "${file%.unknown_video}.mp4"
+    ffmpeg -i "$file" -c:v copy -c:a copy "${file%.unknown_video}.mp4" -y
     rm "$file"
 done
 ```
