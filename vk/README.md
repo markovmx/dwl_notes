@@ -70,7 +70,7 @@ cd "$output_dir" || exit
 
 # Run FFmpeg command to convert .unknown_video files to MP4
 for file in *.unknown_video; do
-    ffmpeg -i "$file" -c:v copy -c:a copy "${file%.unknown_video}.mp4"
+    ffmpeg -i "$file" -c:v copy -c:a copy "${file%.unknown_video}.mp4" -y
     rm "$file"
 done
 ```
